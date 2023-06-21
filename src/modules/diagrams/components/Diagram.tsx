@@ -32,6 +32,7 @@ import Loading from "@/modules/auth/components/Loading";
 import Modal from "@/common/components/elements/Modal";
 import {DataType} from "@/modules/diagrams/enums/DataType";
 import Trash from "@/assets/svg/trash.svg";
+import NavBar from "@/common/components/elements/NavBar";
 
 const initialNodes = [
     {
@@ -266,8 +267,20 @@ export function Diagram() {
         removeMember(diagramID, email).then();
     }
 
-    return <div className={'h-full w-full flex'}>
+    return <div className={'h-full w-full flex flex-col'}>
+      <NavBar>  
+        <>
+        <button className={'btn-black'} onClick={onAdd}>{'Agregar tabla'}</button>
+        { diagram && userID===diagram.owner_id &&
+                        <button className={'btn-black'} onClick={() => setOpenModal(true)}>{'Mienbros'}</button>
+                    }
+        </>
+      </NavBar>
         <Markers/>
+        <div  className={'h-full w-full flex'} >
+        <div className={'h-full w-1/3'}>
+        <SideBar func={closePanel} item={nodeSelected} diagramID={diagramID}/>
+        </div>
         <ReactFlow
             nodes={nodes}
             edges={edges}
@@ -289,15 +302,15 @@ export function Diagram() {
                 <Panel position="top-right" className={'flex gap-5'}>
                     {/*                    <button onClick={onSave}>save</button>
                     <button onClick={onRestore}>restore</button>*/}
-                    <button className={'btn-black'} onClick={onAdd}>{'Agregar tabla'}</button>
+                    {/* <button className={'btn-black'} onClick={onAdd}>{'Agregar tabla'}</button>
                     { diagram && userID===diagram.owner_id &&
                         <button className={'btn-black'} onClick={() => setOpenModal(true)}>{'Mienbros'}</button>
-                    }
+                    } */}
                 </Panel>
             }
-            <Panel position="top-left" className={'w-1/4'}>
+            {/* <Panel position="top-left" className={'w-1/4'}>
                 <SideBar func={closePanel} item={nodeSelected} diagramID={diagramID}/>
-            </Panel>
+            </Panel> */}
             {/* <MiniMap style={minimapStyle} zoomable pannable/>
             <Controls>
                 <ControlButton onClick={(e) => saveAsImage()}/>
@@ -305,6 +318,8 @@ export function Diagram() {
             {/* <Background id="1" gap={10} color="#f1f1f1" variant={BackgroundVariant.Lines}/>
             <Background id="2" gap={100} offset={1} color="#ccc" variant={BackgroundVariant.Lines}/> */}
         </ReactFlow>
+        </div>
+   
         {openModal && <Modal title={'Members'} func={setOpenModal}>
             <div className={'flex flex-col gap-5'}>
                 <div>

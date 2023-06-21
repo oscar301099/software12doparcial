@@ -5,7 +5,7 @@ import {useRouter} from "next/router";
 import {onAuthStateChanged} from "firebase/auth";
 import {auth} from "@/common/config/FirebaseConfig";
 
-function AppLayout({children,background='black'}:any) {
+function AppLayout({children,background='black',enable=true}:any) {
     const router = useRouter()
 
     useEffect(()=>{
@@ -16,7 +16,7 @@ function AppLayout({children,background='black'}:any) {
         });
     },[]);
     return <main className={`bg-${background} h-screen flex flex-col`}>
-        <NavBar/>
+       {enable && <NavBar/>} 
         <div className={'grow'}>
             {children}
         </div>

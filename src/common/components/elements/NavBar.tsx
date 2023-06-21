@@ -37,16 +37,18 @@ import Trash from "@/assets/svg/trash.svg";
 
 function NavBar(props: any) {
     return <div className={'h-16 bg-black border-b-2 border-white w-full flex justify-between items-center px-3'}>
-        <Link href={'/app'}>
-            <h1 className={'text-xl text-white font-bold'}>{'Diagrama'}</h1>
-        </Link>
-        <div>
-            <button className={'sign-out'} onClick={(e)=>logout()}>Desconectarse</button>
-            <button className="guardarFoto" onClick={() => saveAsImage()} style={{ color: "white" }}> Guardar Foto</button>
-           
-        </div>
-       
+    <Link href={'/app'}>
+        <h1 className={'text-xl text-white font-bold'}>{'Diagrama'}</h1>
+    </Link>
+    <div>
+        <button className={'sign-out'} onClick={(e)=>logout()}>Desconectarse</button>
+        <button className="guardarFoto" onClick={() => saveAsImage()} style={{ color: "white" }}>Guardar Foto</button>
+        {
+        props.children
+        }
     </div>
+</div>
+
 }
 
 export default NavBar

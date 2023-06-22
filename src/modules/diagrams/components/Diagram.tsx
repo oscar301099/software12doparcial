@@ -270,9 +270,9 @@ export function Diagram() {
     return <div className={'h-full w-full flex flex-col'}>
       <NavBar>  
         <>
-        <button className={'btn-black'} onClick={onAdd}>{'Agregar tabla'}</button>
+        <button className={'btn-red-500'} onClick={onAdd}>{'Agregar tabla'}</button>
         { diagram && userID===diagram.owner_id &&
-                        <button className={'btn-black'} onClick={() => setOpenModal(true)}>{'Mienbros'}</button>
+                        <button className={'btn-red'} onClick={() => setOpenModal(true)}>{' Agregar Miembros'}</button>
                     }
         </>
       </NavBar>

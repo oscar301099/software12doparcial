@@ -36,7 +36,7 @@ import {DataType} from "@/modules/diagrams/enums/DataType";
 import Trash from "@/assets/svg/trash.svg";
 
 function NavBar(props: any) {
-    return <div className={'h-16 bg-black border-b-2 border-white w-full flex justify-between items-center px-3'}>
+    return <div className={'h-16 bg-red-500 border-b-2 border-white w-full flex justify-between items-center px-3'}>
     <Link href={'/app'}>
         <h1 className={'text-xl text-white font-bold'}>{'Diagrama'}</h1>
     </Link>

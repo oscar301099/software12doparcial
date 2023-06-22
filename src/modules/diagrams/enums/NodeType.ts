@@ -1,5 +1,5 @@
 export enum NodeType {
-    Table = 'table',
-    Edge = 'edge',
+    Table = 'tabla',
+    Edge = 'Relacion',
     Custom = 'custom',
 }

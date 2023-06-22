@@ -104,12 +104,12 @@ function TableOptions({diagramID, node, func}) {
                 })}
             </div>
         </div>
-        <button className={'bg-black text-white'} onClick={handleDeleteTable}>{'Delete'}</button>
+        <button className={'bg-black text-white'} onClick={handleDeleteTable}>{'Eliminar'}</button>
         {openModal && <Modal title={'Añadir Atributo'} func={setOpenModal}>
             <form>
                 <div>
                     <label>{'Nombre'}</label>
-                    <input type="text" placeholder={'Write the field name'} value={fieldName}
+                    <input type="text" placeholder={'Escribe el nombre'} value={fieldName}
                            onChange={(e) => setFieldName(e.target.value)}/>
                 </div>
                 <div>

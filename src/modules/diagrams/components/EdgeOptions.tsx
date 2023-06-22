@@ -31,7 +31,7 @@ function EdgeOptions({diagramID, node, func}) {
         </select>
         <div className={'flex gap-5'}>
             <div className={'w-full'}>
-                <label>{'Start cardinality'}</label>
+                <label>{'cardinalidad inicial'}</label>
                 <select defaultValue={node.data.startCardinality} onChange={updateStartCardinality}>
                     {Object.values(Cardinality).map((cardinality, index) => {
                         return <option key={index} value={cardinality}>{cardinality}</option>
@@ -39,7 +39,7 @@ function EdgeOptions({diagramID, node, func}) {
                 </select>
             </div>
             <div className={'w-full'}>
-                <label>{'End cardinality'}</label>
+                <label>{'cardinalidad final'}</label>
                 <select defaultValue={node.data.endCardinality} onChange={updateEndCardinality}>
                     {Object.values(Cardinality).map((cardinality, index) => {
                         return <option key={index} value={cardinality}>{cardinality}</option>
@@ -47,7 +47,7 @@ function EdgeOptions({diagramID, node, func}) {
                 </select>
             </div>
         </div>
-        <button className={'bg-black text-white'} onClick={handleDeleteEdge}>{'Delete'}</button>
+        <button className={'bg-black text-white'} onClick={handleDeleteEdge}>{'Eliminar'}</button>
     </>
 }
 

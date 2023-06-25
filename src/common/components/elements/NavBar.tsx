@@ -42,7 +42,8 @@ function NavBar(props: any) {
     </Link>
     <div>
         <button className={'sign-out'} onClick={(e)=>logout()}>Desconectarse</button>
-        <button className="guardarFoto" onClick={() => saveAsImage()} style={{ color: "white" }}>Guardar Foto</button>
+        
+      
         {
         props.children
         }

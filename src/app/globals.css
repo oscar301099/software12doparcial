@@ -8,14 +8,14 @@
   }*/
 
   button {
-    @apply px-3 py-1.5 rounded-md
+    @apply px-3 py-1.5 
   }
   input{
-    @apply w-full block p-2 border-2 focus:border-black rounded-md focus:outline-none
+    @apply w-full block p-2 border-2 focus:border-black  focus:outline-none
   }
 
   select{
-    @apply w-full block p-2 border-2 focus:border-black rounded-md focus:outline-none
+    @apply w-full block p-2 border-2 focus:border-black  focus:outline-none
   }
 
   label{
@@ -41,11 +41,11 @@
   }
 
   .new-item{
-      @apply flex gap-2 bg-white text-black p-5 border hover:shadow-white/40 hover:shadow-2xl
+      @apply flex gap-2 bg-white text-black p-3 border hover:shadow-white/40 hover:shadow-2xl
   }
 
   .diagram-card{
-    @apply w-1/2 h-40 flex justify-center items-center bg-white rounded-md text-black text-xl p-5 border hover:shadow-white/40 hover:shadow-2xl
+    @apply  h-4 flex justify-center items-center bg-white text-black text-xl p-5 border hover:shadow-white/40 hover:shadow-2xl
   }
 
   .node-table{

@@ -39,13 +39,13 @@ const initialNodes = [
         id: '1',
         type: NodeType.Custom,
         position: {x: 0, y: 0},
-        data: {title: 'New table'},
+        data: {title: 'Nombre'},
     },
     {
         id: '2',
         type: NodeType.Custom,
         position: {x: 250, y: 320},
-        data: {title: 'New table'},
+        data: {title: 'Nombre'},
     },
 ];
 
@@ -166,7 +166,7 @@ export function Diagram() {
         const newNode = {
             id: crypto.randomUUID(),
             data: {
-                title: 'New table',
+                title: 'Nombre',
                 blocked: false
             },
             position: {
@@ -273,7 +273,9 @@ export function Diagram() {
         <button className={'btn-red-500'} onClick={onAdd}>{'Agregar tabla'}</button>
         { diagram && userID===diagram.owner_id &&
                         <button className={'btn-red'} onClick={() => setOpenModal(true)}>{' Agregar Miembros'}</button>
+                        
                     }
+                      <button className="guardarFoto" onClick={() => saveAsImage()} style={{ color: "white" }}>Guardar Foto</button>
         </>
       </NavBar>
         <Markers/>
@@ -327,7 +329,7 @@ export function Diagram() {
                     <div className={'flex gap-5'}>
                         <input type="text" placeholder={'escribe el emal del usuario que deseas invitar'} value={email}
                                onChange={(e) => setEmail(e.target.value)}/>
-                        <button className={'bg-red-500 text-white'} onClick={handleAddMember}>{'añadir'}</button>
+                        <button className={'bg-red-100 text-white'} onClick={handleAddMember}>{'añadir'}</button>
                     </div>
                 </div>
                 <div className={'divide-y divide-gray-400'}>

@@ -30,9 +30,9 @@ function ListDiagrams(props: any) {
         });
     }, [])
 
-    return <div className={'grid grid-cols-4 place-items-center my-5 gap-5'}>
+    return <div className={'flex flex-col my-4 gap-4 divide-y'}>
         {diagrams.map((diagram, index) => {
-            return <Link href={`app/diagram/${diagram.id}`} key={index} className={'diagram-card'}>
+                     return <Link href={`app/diagram/${diagram.id}`} key={index} className={'diagram-card'}>
                 <h2 className={'text-center'}>{diagram.name}</h2>
             </Link>
         })}

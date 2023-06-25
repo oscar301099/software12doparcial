@@ -10,7 +10,7 @@ function Index(props: any) {
 
     return <>
     <div className={'p-5'}>
-        <div className={'flex justify-center'}>
+        <div className={'flex justify-end'}>
             <NewItem title={'Nuevo Diagrama'} onClick={(e)=>setOpenModal(true)}/>
         </div>
         <ListDiagrams/>

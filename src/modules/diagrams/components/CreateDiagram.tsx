@@ -12,12 +12,12 @@ function CreateDiagram(props: any) {
 
     return <form onSubmit={handleSubmit}>
         <div>
-            <label htmlFor="name">{'Name'}</label>
-            <input type="text" name={'name'} placeholder={'Write the name of the diagram'} required={true} value={name}
+            <label htmlFor="name">{'Nombre'}</label>
+            <input type="text" name={'name'} placeholder={'Escribe el nombre del diagrama'} required={true} value={name}
                    onChange={(e) => setName(e.target.value)}/>
         </div>
         <div className={'flex justify-end'}>
-            <button className={'btn-black'}>{'Add diagram'}</button>
+            <button className={'bg-red-500'}>{'Agregar Diagrama'}</button>
         </div>
     </form>
 }

@@ -6,7 +6,7 @@ interface Props {
 
 function NewItem({ title='New', ...props }:Props) {
     return <button type={'button'} className={'new-item'} onClick={props.onClick}>
-        <Plus/> {title}
+         {title}
     </button>
 }
 

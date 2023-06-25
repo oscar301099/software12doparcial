@@ -120,7 +120,7 @@ function TableOptions({diagramID, node, func}) {
                         })}
                     </select>
                 </div>
-                <button className={'bg-black text-white'} onClick={handleSaveAttribute}>{'Save'}</button>
+                <button className={'bg-red-500 text-white'} onClick={handleSaveAttribute}>{'Guardar'}</button>
             </form>
         </Modal>}
     </>

@@ -104,7 +104,7 @@ function TableOptions({diagramID, node, func}) {
                 })}
             </div>
         </div>
-        <button className={'bg-black text-white'} onClick={handleDeleteTable}>{'Eliminar'}</button>
+        <button className={'bg-red-500 text-white'} onClick={handleDeleteTable}>{'Eliminar'}</button>
         {openModal && <Modal title={'Añadir Atributo'} func={setOpenModal}>
             <form>
                 <div>

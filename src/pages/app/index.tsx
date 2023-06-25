@@ -11,11 +11,11 @@ function Index(props: any) {
     return <>
     <div className={'p-5'}>
         <div className={'flex justify-center'}>
-            <NewItem title={'New diagram'} onClick={(e)=>setOpenModal(true)}/>
+            <NewItem title={'Nuevo Diagrama'} onClick={(e)=>setOpenModal(true)}/>
         </div>
         <ListDiagrams/>
     </div>
-        {openModal && <Modal title={'Create diagram'} func={setOpenModal}>
+        {openModal && <Modal title={'Crear Diagrama'} func={setOpenModal}>
             <CreateDiagram  func={setOpenModal}/>
         </Modal>}
         </>

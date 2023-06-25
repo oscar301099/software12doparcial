@@ -320,14 +320,14 @@ export function Diagram() {
         </ReactFlow>
         </div>
    
-        {openModal && <Modal title={'Members'} func={setOpenModal}>
+        {openModal && <Modal title={'Miembros'} func={setOpenModal}>
             <div className={'flex flex-col gap-5'}>
                 <div>
                     <label>{'Email'}</label>
                     <div className={'flex gap-5'}>
-                        <input type="text" placeholder={'Write the email of user'} value={email}
+                        <input type="text" placeholder={'escribe el emal del usuario que deseas invitar'} value={email}
                                onChange={(e) => setEmail(e.target.value)}/>
-                        <button className={'bg-black text-white'} onClick={handleAddMember}>{'Add'}</button>
+                        <button className={'bg-red-500 text-white'} onClick={handleAddMember}>{'añadir'}</button>
                     </div>
                 </div>
                 <div className={'divide-y divide-gray-400'}>

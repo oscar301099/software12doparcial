@@ -5,7 +5,7 @@ import {useRouter} from "next/router";
 import {onAuthStateChanged} from "firebase/auth";
 import {auth} from "@/common/config/FirebaseConfig";
 
-function AppLayout({children,background='black',enable=true}:any) {
+function AppLayout({children,background='red-500',enable=true}:any) {
     const router = useRouter()
 
     useEffect(()=>{

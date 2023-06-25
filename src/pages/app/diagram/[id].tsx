@@ -29,7 +29,7 @@ export default function Id(props: any) {
 
 Id.getLayout = function getLayout(page) {
     return (
-        <AppLayout enable={false} background={'white'}  >
+        <AppLayout enable={false} background={'red-500'}  >
             {page}
         </AppLayout>
     )
